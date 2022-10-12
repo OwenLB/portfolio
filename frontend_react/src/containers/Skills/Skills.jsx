@@ -9,6 +9,9 @@ import './Skills.scss';
 const Skills = () => {
     const [experiences, setExperiences] = useState([]);
     const [skills, setSkills] = useState([]);
+    const [filterSkills, setFilterSkills] = useState([]);
+    const [activeFilter, setActiveFilter] = useState('Frontend');
+    const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
     useEffect(() => {
         const query = '*[_type == "experiences"]';
@@ -20,21 +23,43 @@ const Skills = () => {
 
         client.fetch(skillsQuery).then((data) => {
             setSkills(data);
+            setFilterSkills(data.filter((skill) => skill.tags.includes("Frontend")));
         });
     }, []);
+
+    const handleSkillsFilter = (item) => {
+        setActiveFilter(item);
+        setAnimateCard([{ y: 100, opacity: 0 }]);
+
+        setTimeout(() => {
+            setAnimateCard([{ y: 0, opacity: 1 }]);
+            setFilterSkills(skills.filter((skill) => skill.tags.includes(item)));
+
+        }, 500);
+    };
 
     return (
         <>
             <h2 className="head-text">Skills & Experiences</h2>
-
             <div className="app__skills-container">
                 <motion.div className="app__skills-list">
-                    {skills.map((skill) => (
+                    <div className="app__skills-filter">
+                        {['Frontend', 'Backend', 'BD', 'Programming', 'Others'].map((item, index) => (
+                            <div
+                                key={index}
+                                onClick={() => handleSkillsFilter(item)}
+                                className={`app__skills-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+                            >
+                                {item}
+                            </div>
+                        ))}
+                    </div>
+                    {filterSkills.map((skill, index) => (
                         <motion.div
                             whileInView={{ opacity: [0, 1] }}
                             transition={{ duration: 0.5 }}
                             className="app__skills-item app__flex"
-                            key={skill.name}
+                            key={index}
                         >
                             <div
                                 className="app__flex"
@@ -47,10 +72,10 @@ const Skills = () => {
                     ))}
                 </motion.div>
                 <div className="app__skills-exp">
-                    {experiences.map((experience) => (
+                    {experiences.map((experience, index) => (
                         <motion.div
                             className="app__skills-exp-item"
-                            key={experience.year}
+                            key={index}
                         >
                             <div className="app__skills-exp-year">
                                 <p className="bold-text">{experience.year}</p>
