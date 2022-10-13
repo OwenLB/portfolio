@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.9e1f8b3b.css",
+    "main.js": "/portfolio/static/js/main.82e7f6a5.js",
+    "static/media/about04.png": "/portfolio/static/media/about04.fa7b3a72ed32b0e25bfb.png",
+    "static/media/about02.png": "/portfolio/static/media/about02.7a3df03410ee756268ec.png",
+    "static/media/about01.png": "/portfolio/static/media/about01.080509de05322b7aafda.png",
+    "static/media/bgIMG.png": "/portfolio/static/media/bgIMG.c39101e520e2997fc6d4.png",
+    "static/media/bgWhite.png": "/portfolio/static/media/bgWhite.79658cadae50b3b16ee5.png",
+    "static/media/about03.png": "/portfolio/static/media/about03.c26c2547bb1a423cf283.png",
+    "static/media/angular.png": "/portfolio/static/media/angular.b6d2a9dec3e43e0ffb95.png",
+    "static/media/profile.png": "/portfolio/static/media/profile.dc4550e978973e1a42b6.png",
+    "static/media/js.png": "/portfolio/static/media/js.37dd0697ee49e72f6ea0.png",
+    "static/media/arkea.png": "/portfolio/static/media/arkea.6b791980d2e8c84db9fa.png",
+    "static/media/mysql.png": "/portfolio/static/media/mysql.0631b0382f88d33fc8bc.png",
+    "static/media/python.png": "/portfolio/static/media/python.d414cc25190e0407e90f.png",
+    "static/media/logo.png": "/portfolio/static/media/logo.1edea38a5a0bd95402af.png",
+    "static/media/postgresql.png": "/portfolio/static/media/postgresql.eead1221da902e1f1f86.png",
+    "static/media/mongodb.png": "/portfolio/static/media/mongodb.bf8042403d8797a7ff1b.png",
+    "static/media/springboot.png": "/portfolio/static/media/springboot.94f201ce44348763e6a5.png",
+    "static/media/sass.png": "/portfolio/static/media/sass.36e863bfbcb25c109d00.png",
+    "static/media/java.png": "/portfolio/static/media/java.066809c7a20b7f36aed9.png",
+    "static/media/email.png": "/portfolio/static/media/email.4f10d6dbd55f9ac499cb.png",
+    "static/media/node.png": "/portfolio/static/media/node.8683d89cf78ffae3d1f7.png",
+    "static/media/cpp.png": "/portfolio/static/media/cpp.9002a804bbfa0354d0b8.png",
+    "static/media/digitalbricks.png": "/portfolio/static/media/digitalbricks.3f5ec2abec8fe8bc68a9.png",
+    "static/media/symfony.png": "/portfolio/static/media/symfony.dde527704e8a42fb39fd.png",
+    "static/media/mobile.png": "/portfolio/static/media/mobile.145d9ce0157a56f8fcd8.png",
+    "static/media/twig.png": "/portfolio/static/media/twig.74e596786ed8a49bf998.png",
+    "static/media/figma.png": "/portfolio/static/media/figma.152e55329b6f1915967e.png",
+    "static/media/css.png": "/portfolio/static/media/css.5721a3928fe43de6baf8.png",
+    "static/media/git.png": "/portfolio/static/media/git.a54d3fa44e02f2f61e69.png",
+    "index.html": "/portfolio/index.html",
+    "static/media/circle.svg": "/portfolio/static/media/circle.134eeeb1e58895b892195fe8ed63bc9f.svg",
+    "main.9e1f8b3b.css.map": "/portfolio/static/css/main.9e1f8b3b.css.map",
+    "main.82e7f6a5.js.map": "/portfolio/static/js/main.82e7f6a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e1f8b3b.css",
+    "static/js/main.82e7f6a5.js"
+  ]
+}
