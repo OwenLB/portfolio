@@ -81,7 +81,7 @@ const Skills = () => {
                                 <p className="bold-text">{experience.year}</p>
                             </div>
                             <motion.div className="app__skills-exp-works">
-                                {experience.works.map((work) => (
+                                {experience.works.map((work, index) => (
                                     <>
                                         <motion.div
                                             whileInView={{ opacity: [0, 1] }}
@@ -89,7 +89,7 @@ const Skills = () => {
                                             className="app__skills-exp-work"
                                             data-tip
                                             data-for={work.name}
-                                            key={work.name}
+                                            key={index}
                                         >
                                             <h4 className="bold-text">{work.name}</h4>
                                             <p className="p-text">{work.company}</p>
