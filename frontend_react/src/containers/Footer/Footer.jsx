@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { images } from '../../constants';
+import { images } from '../../constants/';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
@@ -37,37 +37,41 @@ const Footer = () => {
 
     return (
         <>
-            <h2 className="head-text">Take a coffee & chat with me</h2>
+            <h2 className="head-text">Contactez moi</h2>
 
             <div className="app__footer-cards">
                 <div className="app__footer-card ">
                     <img src={images.email} alt="email" />
-                    <a href="mailto:hello@micael.com" className="p-text">lebec.owen@yahoo.fr</a>
+                    <a href="mailto:lebec.owen@yahoo.fr" className="p-text">lebec.owen@yahoo.fr</a>
+                </div>
+                <div className="app__footer-card ">
+                    <img src={images.pdf} alt="email" />
+                    <a href={images.cv} target={"_blank"} className="p-text">Mon CV</a>
                 </div>
             </div>
             {!isFormSubmitted ? (
                 <div className="app__footer-form app__flex">
                     <div className="app__flex">
-                        <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+                        <input className="p-text" type="text" placeholder="Votre nom" name="username" value={username} onChange={handleChangeInput} />
                     </div>
                     <div className="app__flex">
-                        <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+                        <input className="p-text" type="email" placeholder="Votre mail" name="email" value={email} onChange={handleChangeInput} />
                     </div>
                     <div>
             <textarea
                 className="p-text"
-                placeholder="Your Message"
+                placeholder="Votre message"
                 value={message}
                 name="message"
                 onChange={handleChangeInput}
             />
                     </div>
-                    <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+                    <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Envoyer le message' : 'Envoie...'}</button>
                 </div>
             ) : (
                 <div>
                     <h3 className="head-text">
-                        Thank you for getting in touch!
+                        Merci de m'avoir contacté, je vous répondrai dans les plus brefs délais.
                     </h3>
                 </div>
             )}
@@ -78,5 +82,5 @@ const Footer = () => {
 export default AppWrap(
     MotionWrap(Footer, 'app__footer'),
     'contact',
-    'app__whitebg',
+    'app__primarybg',
 );

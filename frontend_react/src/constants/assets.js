@@ -47,7 +47,12 @@ import postgresql from '../assets/postgresql.png';
 import figma from '../assets/figma.png';
 import git from '../assets/git.png';
 
+import cv from '../assets/CV.pdf';
+import pdf from '../assets/pdf.png';
+
 export default {
+    cv,
+    pdf,
     about01,
     about02,
     about03,

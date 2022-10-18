@@ -27,7 +27,7 @@
     padding: 1rem;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #eff0f9;
+    background-color: var(--white-color);
 
     transition: all 0.3s ease-in-out;
 
@@ -45,7 +45,7 @@
       font-weight: 500;
     }
     &:hover {
-      box-shadow: 0 0 25px #fef4f5;
+      box-shadow: 0 0 25px #b4bac1;
     }
 
     @media screen and (max-width: 450px) {
@@ -59,11 +59,11 @@
 }
 
 .app__footer-cards .app__footer-card:last-child {
-  background-color: #f2f7fb;
+  background-color: var(--white-color);
 }
 
 .app__footer-cards .app__footer-card:last-child:hover {
-  box-shadow: 0 0 25px #f2f7fb;
+  box-shadow: 0 0 25px #b4bac1;
 }
 
 .app__footer-form {
@@ -87,7 +87,7 @@
       padding: 0.95rem;
       border: none;
       border-radius: 7px;
-      background-color: var(--primary-color);
+      background-color: var(--white-color);
 
       font-family: var(--font-base);
       color: var(--secondary-color);

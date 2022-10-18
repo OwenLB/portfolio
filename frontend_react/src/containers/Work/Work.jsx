@@ -29,7 +29,7 @@ const Work = () => {
         setTimeout(() => {
             setAnimateCard([{ y: 0, opacity: 1 }]);
 
-            if (item === 'All') {
+            if (item === 'Tous') {
                 setFilterWork(works);
             } else {
                 setFilterWork(works.filter((work) => work.tags.includes(item)));
@@ -39,10 +39,10 @@ const Work = () => {
 
     return (
         <>
-            <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
+            <h2 className="head-text">Mes <span>Projets</span></h2>
 
             <div className="app__work-filter">
-                {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+                {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'Tous'].map((item, index) => (
                     <div
                         key={index}
                         onClick={() => handleWorkFilter(item)}
@@ -111,6 +111,6 @@ const Work = () => {
 
 export default AppWrap(
     MotionWrap(Work, 'app__works'),
-    'work',
+    'projets',
     'app__primarybg',
 );

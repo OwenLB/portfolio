@@ -10,7 +10,7 @@ const Skills = () => {
     const [experiences, setExperiences] = useState([]);
     const [skills, setSkills] = useState([]);
     const [filterSkills, setFilterSkills] = useState([]);
-    const [activeFilter, setActiveFilter] = useState('Frontend');
+    const [activeFilter, setActiveFilter] = useState('Front-End');
     const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const Skills = () => {
 
         client.fetch(skillsQuery).then((data) => {
             setSkills(data);
-            setFilterSkills(data.filter((skill) => skill.tags.includes("Frontend")));
+            setFilterSkills(data.filter((skill) => skill.tags.includes("Front-End")));
         });
     }, []);
 
@@ -40,11 +40,11 @@ const Skills = () => {
 
     return (
         <>
-            <h2 className="head-text">Skills & Experiences</h2>
+            <h2 className="head-text">Compétences & Expérience</h2>
             <div className="app__skills-container">
                 <motion.div className="app__skills-list">
                     <div className="app__skills-filter">
-                        {['Frontend', 'Backend', 'BD', 'Programming', 'Others'].map((item, index) => (
+                        {['Front-End', 'Back-End', 'BDD', 'Programmation', 'Autres'].map((item, index) => (
                             <div
                                 key={index}
                                 onClick={() => handleSkillsFilter(item)}
@@ -115,6 +115,6 @@ const Skills = () => {
 
 export default AppWrap(
     MotionWrap(Skills, 'app__skills'),
-    'skills',
+    'compétences',
     'app__whitebg',
 );

@@ -27,13 +27,13 @@ const Header = () => (
                 <div className="badge-cmp app__flex">
                     <span>👋</span>
                     <div style={{ marginLeft: 20 }}>
-                        <p className="p-text">Hello, I am</p>
+                        <p className="p-text">Salut, c'est</p>
                         <h1 className="head-text">Owen</h1>
                     </div>
                 </div>
 
                 <div className="tag-cmp app__flex">
-                    <p className="p-text">Web Developer</p>
+                    <p className="p-text">Développeur Web</p>
                     <p className="p-text">FullStack</p>
                 </div>
             </div>
@@ -65,7 +65,12 @@ const Header = () => (
                 </div>
             ))}
         </motion.div>
+        <div className="scroll-downs">
+            <div className="mousey">
+                <div className="scroller"></div>
+            </div>
+        </div>
     </div>
 );
 
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, 'accueil');
